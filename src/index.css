@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+.animi {
+    @apply transition-all duration-300
+}
+
+@theme {
+  --font-inter: "Inter Tight", ui-sans-serif, system-ui, sans-serif;
+  --font-instrument: "Instrument Serif", ui-serif, Georgia, serif;
+  --color-green: #021b17;
+  --color-milk: #f8f8f8;
+  --text-base: 15px;
+  --breakpoint-lg: 1185px;
+  --breakpoint-md: 800px;
+}
+
+@theme {
+    @keyframes fade-in-up {
+        from { opacity: "0"; transform: "translateY(30px)" }
+        to { opacity: "1"; transform: "translateY(0)" }
+    }
+
+    @keyframes scroll {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    }
+
+    @keyframes scroll-reverse {
+        from {
+            transform: translateX(-50%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    --animate-fade-in-up: "fade-in-up 1.8s ease-out";
+    --animate-scroll: scroll 30s linear infinite;
+    --animate-scroll-reverse: scroll-reverse 30s linear infinite;
+}
+
+@layer {
+    .pause-on-hover:hover {
+        animation-play-state: paused;
+    }
+}
