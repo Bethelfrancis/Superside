@@ -161,7 +161,7 @@ const Creative = () => {
 
                 <div className='mt-28'>
                     <div className='flex flex-col lg:flex-row justify-between items-center gap-5 mb-8'>
-                        <div className='flex flex-col justify-between rounded-xl text-green bg-[#ffc58f] h-60 lg:h-110 p-4 lg:p-6 w-full lg:w-[35%]'>
+                        <div className='flex flex-col justify-between rounded-xl text-green bg-[#ffc58f] h-60 lg:h-130 p-4 lg:p-6 w-full lg:w-[35%]'>
                             <div>
                                 <span>
                                     <Users className='w-10 h-10' />
@@ -229,7 +229,7 @@ const Creative = () => {
                             </div>
                         </div>
 
-                        <div className='flex flex-col justify-between rounded-xl text-green bg-[#75dfff] h-60 lg:h-110 p-4 lg:p-6 w-full lg:w-[35%]'>
+                        <div className='flex flex-col justify-between rounded-xl text-green bg-[#75dfff] h-60 lg:h-130 p-4 lg:p-6 w-full lg:w-[35%]'>
                             <div>
                                 <span>
                                     <ClockFading className='w-10 h-10' />
