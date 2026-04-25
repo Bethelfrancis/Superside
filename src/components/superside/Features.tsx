@@ -65,7 +65,7 @@ const Features = () => {
                 </div>
             </div>
 
-            <div className="bg-[#75dfff] flex flex-col-reverse lg:flex-row-reverse justify-between">
+            <div className="bg-[#75dfff] flex flex-col lg:flex-row-reverse justify-between">
                 <div className="w-full lg:w-1/2 pr-6 lg:pr-16 py-12 pl-10">
                     <h4 className="text-lg uppercase mb-9 border-b border-green">
                         Global Support and Availability

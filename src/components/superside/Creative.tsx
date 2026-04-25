@@ -104,17 +104,17 @@ const Creative = () => {
             </div>
 
             <div className="relative w-full overflow-hidden">
-                <div className="flex items-stretch w-max animate-scroll gap-4 lg:gap-7">
+                <div className="flex items-stretch w-max animate-scroll gap-4 lg:gap-7 my-20">
                     {
                         duplicatedImages.map((sub, index) => (
                             <div
                                 key={`${sub.id}-${index}`}
-                                className="group animi relative rounded-xl flex w-60 lg:w-100 h-90 lg:h-120 bg-white p-2 lg:p-4"
+                                className="group animi relative rounded-xl flex w-60 lg:w-100 h-90 lg:h-120 bg-white p-2 lg:p-4 hover:-translate-y-3"
                             >
                                 <img
                                     src={sub.src}
                                     alt={sub.brand}
-                                    className="w-full h-full absolute top-0 left-0 object-cover rounded-xl"
+                                    className="w-full h-full absolute top-0 left-0 object-cover rounded-xl "
                                 />
 
                                 <div className='flex flex-col justify-between z-30 text-[#a09f9f] w-full'>
@@ -123,13 +123,16 @@ const Creative = () => {
                                         {sub.brand}
                                     </h2>
 
-                                    <div className='hidden animi lg:hidden lg:group-hover:flex flex-wrap gap-3 items-center mt-4'>
-                                        {
-                                            sub.desc.map(i => 
-                                                <button className='bg-transparent text-[13px] text-[#a09f9f] font-medium rounded-full px-2 py-1 border border-[#a09f9f]'>{i}</button>
-                                            )
-                                        }
+                                    <div className='relative'>
+                                        <div className='hidden absolute top-6 animi opacity-0 group-hover:opacity-100 group-hover:-top-12 lg:flex flex-wrap gap-3 items-center mt-4'>
+                                            {
+                                                sub.desc.map(i => 
+                                                    <button className='bg-transparent text-[13px] text-white font-medium rounded-full px-2 py-1 border border-white'>{i}</button>
+                                                )
+                                            }
+                                        </div>
                                     </div>
+                                        
                                 </div>
                                 
                                 

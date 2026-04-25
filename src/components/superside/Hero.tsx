@@ -74,7 +74,7 @@ const Hero = () => {
 
     return (
         <section className="lg:pt-52 pt-36 pb-16 overflow-hidden">
-            <div className="w-full px-6 text-center mb-16">
+            <div className="w-full px-6 text-center">
                 <h1 className="mx-auto lg:w-5xl text-green text-5xl md:text-6xl lg:text-7xl mb-6">
                     A dedicated creative team, {" "}
                     <span className="font-instrument italic">built for your creative team</span>
@@ -84,42 +84,37 @@ const Hero = () => {
                 </button>
             </div>
 
-            <div className="relative w-full overflow-hidden">
-                <div className="flex items-stretch w-max animate-scroll pause-on-hover">
+            <div className="relative w-full overflow-hidden hover:slow-scroll">
+                <div className="flex items-stretch w-max animate-scroll my-20">
                     {
                         duplicatedImages.map((sub, index) => (
                             <div
                                 key={`${sub.id}-${index}`}
-                                className="relative rounded-xl overflow-hidden shrink-0 w-70 lg:w-120 mx-2.5"
+                                className={`group cursor-pointer relative rounded-xl overflow-hidden shrink-0 w-70 lg:w-110 mx-2.5 transition-all duration-500 ${index % 2 === 0 ? "lg:translate-y-0" : "lg:translate-y-15"} hover:rotate-1`}
                             >
                                 <img
                                     src={sub.src}
                                     alt={sub.brand}
-                                    className="w-full h-70 lg:h-100 object-cover"
+                                    className="w-full h-70 lg:h-100 object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                                 />
                                 
-                                <div className='bg-green text-[#a09f9f] p-8'>
-                                    <h4 className='uppercase text-[16px] mb-2.5'>
+                                <div className='bg-green text-[#a09f9f] p-3 lg:p-8'>
+                                    <h4 className='uppercase text-sm lg:text-[16px] mb-1 lg:mb-2.5'>
                                         {sub.label}
                                     </h4>
 
-                                    <h2 className='text-milk text-3xl font-instrument font-medium'>
+                                    <h2 className='text-milk text-2xl lg:text-3xl font-instrument font-medium'>
                                         {sub.brand}
                                     </h2>
 
-                                    {/* <div className='flex gap-3 items-center mt-4'>
+                                    <div className='flex flex-wrap gap-2 items-center mt-4'>
                                         {
                                             sub.desc.map(i => 
-                                                <button className='bg-transparent text-base text-[#a09f9f] font-medium rounded-full px-3.5 py-2 border border-[#a09f9f]'>{i}</button>
+                                                <button className='hidden lg:block bg-transparent text-sm text-[#a09f9f] font-medium rounded-full px-1.5 py-1 border border-[#a09f9f]'>{i}</button>
                                             )
                                         }
-                                    </div> */}
-                                </div>
-                                    <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <span className="text-sm font-medium bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
-                                            {sub.brand}
-                                        </span>
                                     </div>
+                                </div>
                             </div>
                         ))
                     }
